@@ -1,0 +1,132 @@
+body {
+  font-family: system-ui;
+  margin: 0;
+  background-color: hsl(257, 40%, 49%);
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+body::before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  background-image: url('../assets/images/bg-mobile.svg');
+  inline-size: 100%;
+  block-size: 300px;
+}
+img {
+  max-inline-size: 100%;
+}
+.wrapper {
+  max-inline-size: 1275px;
+  margin: auto;
+}
+.main-content {
+  text-align: center;
+}
+.main-content,
+.footer-content {
+  padding-inline: 2.25rem;
+}
+.logo {
+  inline-size: 120px;
+  block-size: 20px;
+  padding-block: 1rem;
+}
+.cover {
+  padding-block: 2rem;
+}
+h1,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-family: 'Poppins', sans-serif;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-block-start: 1rem;
+  margin-block-end: 1.5rem;
+}
+.btn {
+  background-color: #fff;
+  color: #684bb1;
+  font-size: 12px;
+  line-height: 18px;
+  padding-inline: 4.6875rem;
+  padding-block: 0.625rem;
+  border-radius: 50px;
+  border-color: transparent;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.269022);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: #fff;
+}
+.footer-content {
+  padding-block: 3rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.footer-content i {
+  inline-size: 30px;
+  block-size: 30px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  body::before {
+    background-image: url('../assets/images/bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    block-size: 100%;
+  }
+  .logo {
+    padding-block: 3rem;
+    inline-size: 200px;
+    block-size: 32px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.75rem;
+  }
+  .description {
+    align-self: center;
+    text-align: start;
+  }
+  .footer-content {
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    padding-block: 0.5rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+  }
+  p {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+  .btn {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+}
